@@ -2,7 +2,7 @@ h1. Hon-ee Pot Captcha
 
 I wanted to try to use the honey pot captcha technique to combat spam on my site. This technique includes a field on each form, hides it off the page with CSS and then validates on the back end to make sure it's not filled in.
 
-This addon validates Freeform, Safecracker, EE Member Registration, EE Member login, Zoo Visitor Registration, ProForm, Solspace User Registration, and EE comment forms.
+This addon validates Freeform, Safecracker, EE Member Registration, EE Member login, Zoo Visitor Registration, ProForm, Solspace User Registration, EE Forums, and EE comment forms.
 
 h2. Requirements & Installation
 
@@ -33,6 +33,17 @@ h3. Comment forms
 
 Follow the same steps as the Freeform forms, except you do not have to create the field in Freeform.
 
+h3. Member Registration form
+
+Add the honeepot field to /themes/profile_themes/default/registration_form.html
+
+h3. EE Forums
+
+The main forms to edit are:
+forum_submission/fast_reply_form.html
+forum_submission/submission_form.html
+forum_member/registration_form.html
+
 h3. Safecracker, Zoo Visitor Registration, Solspace User Registration, & ProForm Forms
 
 Doesn't show error when using inline validation, but still protects the entry from being submitted.
@@ -43,3 +54,7 @@ If you want to override the extension settings, you can with the following confi
 
 <pre>$config['honeepot_field'] = 'honeepot';
 $config['honeepot_error'] = 'Sorry, but we think you might be a robot.';</pre>
+
+h3. Credits
+
+Forums protection added by Travis Smith, Hop Studios, http://www.hopstudios.com/
